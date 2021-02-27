@@ -8,6 +8,8 @@ class KHello {
     }
 }
 
+typealias MyHandler = (Int, String, Any) -> Unit
+
 fun main(args: Array<String>) {
     println("Hello Kotlin")
 
