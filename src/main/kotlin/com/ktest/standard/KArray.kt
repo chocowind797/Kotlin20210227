@@ -29,4 +29,15 @@ fun main() {
     // 四星彩電腦選號 (0~9)   若變數不會使用到,則可換為 _ , 以避免撞變數名
     val num4 = Array(4) { _ -> Random.nextInt(10)}
     println(num4.contentToString()) // Arrays.toString(num4)
+
+    // setter / getter
+    val n1 = num4.get(1) // num4[1]
+    println(n1)
+
+    num4.set(1, 9) // num4[1] = 9
+    println(num4.contentToString())
+
+    // for-each (印出集合內容)
+    num4.forEach { n -> print("$n ") }
+    println()
 }
