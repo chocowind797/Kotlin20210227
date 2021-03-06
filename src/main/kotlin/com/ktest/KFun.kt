@@ -6,17 +6,17 @@ package com.ktest
  *  }
  */
 
-fun add(x: Int, y: Int): Int{
+fun add(x: Int, y: Int): Int {
     val sum = x + y
     return sum
 }
 
-fun sub(x: Int, y: Int = 0): Int{
+fun sub(x: Int, y: Int = 0): Int {
     val sum = x - y
     return sum
 }
 
-fun mul(x: Int = 0, y: Int = 0): Int{
+fun mul(x: Int = 0, y: Int = 0): Int {
     val sum = x * y
     return sum
 }
@@ -32,5 +32,5 @@ fun main() {
     println(sub(10))
     println(mul(10, 20))
     println(mul())
-    println(div(y=1))
+    println(div(y = 1))
 }
