@@ -1,4 +1,4 @@
-package com.ktest
+package com.ktest.standard
 
 fun main() {
     val chinese: Int? = null

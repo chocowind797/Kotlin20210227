@@ -1,4 +1,4 @@
-package com.ktest
+package com.ktest.standard
 
 /** 存儲修飾字(預設為public) 方法名稱(arg1: type1, arg2: type2...): 回傳型態 {
  *      方法實作內容

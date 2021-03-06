@@ -6,5 +6,4 @@ class Student {
     val subject: String = "Kotlin"
     var name: String = ""
     var isPass: Boolean = false // 產生 isPass()、getPass(), 不產生getIsPass()
-
 }

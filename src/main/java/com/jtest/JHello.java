@@ -1,6 +1,6 @@
 package com.jtest;
 
-import com.ktest.KHello;
+import com.ktest.standard.KHello;
 
 public class JHello {
     public static void main(String[] args) {

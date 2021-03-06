@@ -1,4 +1,4 @@
-package com.ktest
+package com.ktest.standard
 
 fun getPrice(): Int {
     return 100
