@@ -14,7 +14,7 @@ fun main() {
     println()
 
     // indices -> 數組的所有 index
-    for(i in num1.indices)
+    for(i in num2.indices)
         print("${num1[i]} ")
 
     println()
@@ -27,7 +27,7 @@ fun main() {
     println()
 
     // 四星彩電腦選號 (0~9)   若變數不會使用到,則可換為 _ , 以避免撞變數名
-    val num4 = Array(4) { _ -> Random.nextInt(10)}
+    val num4 = Array(4) { _ -> Random.nextInt(10)} // or {Random.nextInt(10)}
     println(num4.contentToString()) // Arrays.toString(num4)
 
     // setter / getter
