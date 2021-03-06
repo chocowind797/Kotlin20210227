@@ -9,13 +9,20 @@ fun main() {
 
     while (true) {
         println("電梯目前位置: $elevator 樓")
-        print("請選擇進入的樓層($bottomFloor~$topFloor):")
+        print("請選擇進入的樓層(B1~$topFloor):")
 
-        var toFloor = readLine()!!.toInt()
+        // 將 try 作為表達式 (try 表達式)
+        var toFloor = try {
+            readLine()!!.toInt()
+        } catch (e: NumberFormatException) {
+            if(e.message!!.contains("B1")) -1 else Int.MIN_VALUE
+        }
+
+//        println(toFloor)
 
         try {
             toFloor = if (toFloor in bottomFloor..topFloor) toFloor else throw Exception("樓層錯誤")
-        }catch (e: java.lang.Exception){
+        } catch (e: java.lang.Exception) {
             println(e.message)
             continue
         }
@@ -57,11 +64,4 @@ fun main() {
         myPos = elevator
         println("===========")
     }
-}
-
-fun elevator(){
-
-
-
-    elevator()
 }
