@@ -15,4 +15,5 @@ fun main() {
 
     // 請問平均年齡?
     println(people.map{it.age}.average())
+
 }
