@@ -30,13 +30,13 @@ fun main() {
         if (elevator != myPos) {
             if (elevator > myPos) {
                 println("電梯下樓")
-                for (i in (elevator - 1) downTo 0) {
+                for (i in elevator downTo 0) {
                     println(i)
                     Thread.sleep(1000)
                 }
             } else {
                 println("電梯上樓")
-                for (i in (elevator + 1)..0) {
+                for (i in elevator..0) {
                     println(i)
                     Thread.sleep(1000)
                 }
@@ -48,13 +48,13 @@ fun main() {
 
         if (toFloor > elevator) {
             println("電梯上樓")
-            for (i in (elevator + 1)..toFloor) {
+            for (i in elevator..toFloor) {
                 println(i)
                 Thread.sleep(1000)
             }
         } else {
             println("電梯下樓")
-            for (i in (elevator - 1) downTo toFloor) {
+            for (i in elevator downTo toFloor) {
                 println(i)
                 Thread.sleep(1000)
             }
