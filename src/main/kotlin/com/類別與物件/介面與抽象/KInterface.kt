@@ -39,4 +39,9 @@ fun main() {
     val btn = Button()
     btn.showOff()
     btn.click()
+
+    val tf = TextField()
+    tf.showOff()
+    tf.click()
+    tf.setFocus(true)
 }
