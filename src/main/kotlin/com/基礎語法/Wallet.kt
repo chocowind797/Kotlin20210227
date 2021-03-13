@@ -1,4 +1,4 @@
-package com.ktest
+package com.基礎語法
 
 // data 為自動覆寫 toString(), 但僅限建構子內變數
 // data class 使用於存儲資料(只有建構子[和init], ex: 資料庫), 常不含商業方法(if-else)

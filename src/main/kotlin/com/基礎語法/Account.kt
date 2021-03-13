@@ -1,4 +1,4 @@
-package com.ktest
+package com.基礎語法
 
 class Account(val name: String) {
     var balance: Int = 0

@@ -1,4 +1,4 @@
-package com.ktest
+package com.基礎語法
 
 class Student {
     // val 自動產生 getter, var 則產生 getter/setter
