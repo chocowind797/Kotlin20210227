@@ -19,7 +19,7 @@ fun main() {
     for (jo in records) {
         jo as JSONObject
         if (jo.getString("surplusSpace").toInt() >= 200) {
-            println("${jo.getString("parkName")} 還有 ${jo.getString("surplusSpace").toInt()} 個停車位")
+            println("${jo.getString("parkName")} :  ${jo.getString("surplusSpace")} / ${jo.getInt("totalSpace")}")
         }
     }
 }
