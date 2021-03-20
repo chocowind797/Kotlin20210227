@@ -1,4 +1,4 @@
-package com.類別與物件.進階控制.內聯函式
+package com.進階控制.內聯函式
 
 /**
  *  內聯函式: inline / noinline
