@@ -12,6 +12,7 @@ inline fun doCal(a: Int, b: Int, cal: (a: Int, b: Int) -> Int): Int {
 
 fun main() {
     // lambda 為內部類別,所以若是多次調用,會產生過多物件
+    // 所以若使用內聯函式(inline)則可以增加效能
     val value = doCal(10, 20, sum)
     println(value)
 }
