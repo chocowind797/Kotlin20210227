@@ -1,4 +1,4 @@
-package com.類別與物件.進階控制.內聯函式
+package com.進階控制.內聯函式
 
 val sum: (Int, Int) -> Int = { x, y -> x + y }
 val action: () -> Unit = { println("kotlin") }   // Unit -> void
