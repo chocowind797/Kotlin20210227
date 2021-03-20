@@ -1,4 +1,4 @@
-package com.類別與物件.進階控制.網路資源存取
+package com.進階控制.網路資源存取
 
 import org.json.JSONObject
 import java.net.URL
@@ -32,26 +32,24 @@ fun main() {
     for (jo in records) {
         jo as JSONObject
         val distance = getDistance(121.3120108551101, 24.990056759076385, jo.getDouble("wgsX"), jo.getDouble("wgsY"))
-        if (distance <= 1000 && jo.getString("surplusSpace").toInt() > 0) {
-            println("${jo.getString("parkName")} :  ${jo.getString("surplusSpace")} / ${jo.getInt("totalSpace")}")
+        if (distance <= 500 && jo.getString("surplusSpace").toInt() > 0) {
+            println(
+                "${jo.getString("parkName")} :  ${jo.getString("surplusSpace")} / ${jo.getInt("totalSpace")}  %.2f".format(
+                    distance
+                )
+            )
         }
     }
 
 }
 
 fun getDistance(long1: Double, lat1: Double, long2: Double, lat2: Double): Double {
-    var lat1 = lat1
-    var lat2 = lat2
-
     val R = 6378137.0 // 地球半径
-    lat1 = lat1 * Math.PI / 180.0
-    lat2 = lat2 * Math.PI / 180.0
-    val a = lat1 - lat2
+
+    val a = (lat1 - lat2) * Math.PI / 180.0
     val b = (long1 - long2) * Math.PI / 180.0
-    val d: Double
 
     val sa2 = sin(a / 2.0)
     val sb2 = sin(b / 2.0)
-    d = (2 * R * asin(sqrt(sa2 * sa2 + (cos(lat1) * cos(lat2) * sb2 * sb2))))
-    return d
+    return (2 * R * asin(sqrt(sa2 * sa2 + (cos(lat1) * cos(lat2) * sb2 * sb2))))
 }
