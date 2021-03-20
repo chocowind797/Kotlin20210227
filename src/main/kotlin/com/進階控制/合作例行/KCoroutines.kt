@@ -1,4 +1,4 @@
-package com.類別與物件.進階控制.合作例行
+package com.進階控制.合作例行
 
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
